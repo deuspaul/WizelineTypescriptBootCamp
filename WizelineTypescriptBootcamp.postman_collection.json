@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "0638c282-eb49-4f50-ada0-40cc5057d127",
+		"name": "WizelineTypescriptBootcamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/cakes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cakes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cakes"
+					]
+				},
+				"description": "This returns the list of cakes from the database and populates the in-memory array."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cake/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"lodo34\",\"price\":200.99,\"flavors\":[\"tierra\", \"chocolate\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cake/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cake",
+						""
+					]
+				},
+				"description": "This adds an entry to the database if the name is unique. It will also add the entry to the in-memory array if successful."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cake/:name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cake/:name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cake",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "lodo7"
+						}
+					]
+				},
+				"description": "This will retrieve a cake by its name from the in-memory array. If it is not found in the in-memory array it will look in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cake/name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"lodo7\",\"price\":7200.77,\"flavors\":[\"7tierra7\", \"7chocolate7\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cake/name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cake",
+						"name"
+					]
+				},
+				"description": "This will update an entry in the database by its name. If successful it will update it in the in-memory array as well."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cake/:name",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cake/:name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cake",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "lodo5"
+						}
+					]
+				},
+				"description": "This will delete an entry from the database by its name. If successful it will also remove it from the in-memory array."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
